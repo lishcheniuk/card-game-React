@@ -1,0 +1,10 @@
+export const START = "new game";
+export const SHUFFLE = "shuffle cards";
+export const DISTRIB_CARDS = "distribution cards";
+export const MOVE = "move the card";
+export const FIGHT_OFF = "fight off opponent";
+export const EXIT = "exit game";
+export const TAKE_CARDS = "take cards";
+export const ADD_CARDS = "add cards";
+export const SHOW_ALERT = "show alert";
+export const HIDE_ALERT = "hide alert";

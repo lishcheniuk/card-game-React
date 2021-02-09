@@ -1,0 +1,182 @@
+.game__wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: url(/images/doska.jpg) top center;
+  overflow: hidden;
+}
+
+.my__area,
+.oponent__area {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: center;
+  margin-left: 40px;
+}
+.oponent__area {
+  margin-top: -55px;
+  padding-bottom: 20px;
+}
+.my__area {
+  padding-top: 20px;
+  margin-bottom: -55px;
+}
+
+.card-i {
+  position: relative;
+  top: 0;
+  transition: top ease-in 0.2s;
+  border-radius: 10px;
+  border: 1px solid #000;
+  overflow: hidden;
+  background-color: #f5f1f1;
+  background-size: 44em;
+  width: 127px;
+  height: 183px;
+  margin-left: -60px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 0px 25px #000;
+    top: -10px;
+    z-index: 100;
+  }
+}
+
+.my__area .card-i:first-child,
+.my__area .card-i:last-child {
+  margin-top: 20px;
+}
+
+.oponent__area .card-i:first-child,
+.oponent__area .card-i:last-child {
+  margin-top: -20px;
+}
+
+.main__area {
+  flex-grow: 1;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.cards__remain {
+  display: flex;
+  margin-left: 10px;
+  position: relative;
+  flex-basis: 20%;
+
+  &-length {
+    position: absolute;
+    top: -30px;
+    left: 45px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+  }
+}
+.main__area-action {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-width: 60%;
+  max-width: 70%;
+  justify-items: center;
+
+  .reject {
+    position: relative;
+  }
+
+  .card-i {
+    display: inline-block;
+    margin-left: 0;
+    transform: rotate(-10deg) scale(0.8);
+    transition: inherit;
+  }
+
+  .more-card {
+    transform: rotate(10deg) scale(0.8);
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+}
+
+.cards__remain .card-i,
+.oponent__area .card-i {
+  background: url(/images/rubashka3.jpg) center no-repeat;
+  background-size: cover;
+  border: inherit;
+  transition: inherit;
+}
+
+.cards__remain .card-i {
+  margin-left: 0px;
+}
+
+.cards__remain .joker {
+  transform: rotate(-90deg);
+  left: 43px;
+  background-size: 44em;
+}
+
+.cards__remain .remain,
+.main__area .cards__remain .remain:hover {
+  z-index: 1;
+  left: -135px;
+}
+
+.oponent__area .card-i:hover,
+.cards__remain .card-i:hover,
+.main__area-action .card-i:hover {
+  top: 0;
+  box-shadow: none;
+  cursor: inherit;
+  z-index: 0;
+}
+
+.control {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.control__opponent {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.control-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  *background-color: lightcoral;
+  background-color: #000;
+  color: #fff;
+  *border: 5px solid ivory;
+  border: none;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px #000;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.exit {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: #000;
+  font-size: 16px;
+}

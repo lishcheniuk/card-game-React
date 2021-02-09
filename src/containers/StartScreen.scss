@@ -1,0 +1,81 @@
+.start__screen {
+  background: url(/images/durak_img.jpg) top center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .menu {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    border-radius: 10px;
+    width: 300px;
+    font-size: 20px;
+
+    p {
+      border-bottom: 1px solid #fff;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    ul {
+      margin: 10px;
+      padding: 0;
+      list-style: none;
+      color: seashell;
+
+      li {
+        padding: 5px;
+        user-select: none;
+
+        &:hover {
+          background-color: #000;
+          cursor: pointer;
+          box-shadow: 0px 0px 15px 5px #000;
+        }
+      }
+    }
+  }
+
+  .loader {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(/images/loader.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #fff;
+    animation: linear 10s infinite rotate;
+  }
+}
+
+.sound {
+  position: absolute;
+  background-color: #fff;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 42px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
